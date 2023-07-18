@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { properties } from 'src/assets/properties/properties';
 
 @Component({
   selector: 'app-login',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  value!: string;  
+  value!: string;
+  logo = properties.logo;
 }

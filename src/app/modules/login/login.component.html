@@ -1,5 +1,22 @@
-<section>
+<section class="login">
     <form>
-        <input type="text" pInputText [(ngModel)]="value" />
+        <div class="row">
+            <div class="col-12 item img">
+                <img src="{{logo}}" alt="">
+            </div>
+            <p class="item">LOGIN</p>
+            <label for="username" class="item">User:</label>
+            <div class="col-12 item">
+                <input type="text" id="username" pInputText [(ngModel)]="value" name="username"/>
+            </div>
+            <label for="username" class="item">Password:</label>
+            <div class="col-12 item">
+                <p-password [(ngModel)]="value" [feedback]="false" name="password"></p-password>
+            </div>
+            <p class="item">Forgot password?</p>
+            <div class="col-12 item">
+                <p-button label="Login"></p-button>
+            </div>
+        </div>
     </form>
 </section>
