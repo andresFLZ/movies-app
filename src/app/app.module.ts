@@ -8,7 +8,7 @@ import { MoviesComponent } from './modules/movies/movies.component';
 import { MovieDetailComponent } from './modules/movies/movie-detail/movie-detail.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { ButtonModule } from 'primeng/button';
     InputTextModule,
     FormsModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
