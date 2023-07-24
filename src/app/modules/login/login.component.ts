@@ -46,7 +46,5 @@ export class LoginComponent {
     this.apiService.postService(configPost).subscribe(data => {
       console.log(data);
     });
-
-    console.log(this.formLogin.value)
   }
 }
