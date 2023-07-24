@@ -41,7 +41,7 @@ export class LoginComponent {
       password,
       request_token: '1531f1a558c8357ce8990cf887ff196e8f5402ec'
     };
-    const configPost = { url: ConstantUri.login, params: ConstantUri.apikey, body };
+    const configPost = { url: ConstantUri.login, params: ConstantUri.apiKey, body };
 
     this.apiService.postService(configPost).subscribe(data => {
       console.log(data);
