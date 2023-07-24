@@ -39,9 +39,9 @@ export class LoginComponent {
     const body = {
       username,
       password,
-      request_token: '1531f1a558c8357ce8990cf887ff196e8f5402ec'
+      request_token: sessionStorage.getItem('requestToken')
     };
-    const configPost = { url: ConstantUri.login, params: ConstantUri.apiKey, body };
+    const configPost = { url: ConstantUri.login, params: {api_key: ConstantUri.apiKey}, body };
 
     this.apiService.postService(configPost).subscribe(data => {
       console.log(data);

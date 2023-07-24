@@ -27,6 +27,24 @@ export class ApiService<T> {
     );
   }
 
+  getService(paramsReq: any): Observable<T> {
+    const headers = new HttpHeaders({
+      accept: 'application/json',
+    });
+
+    const { url, params } = paramsReq;
+    const options = {
+      headers,
+      params
+    }
+
+    return this.http.get<T>(url, options)
+    .pipe(
+      map(response => response),
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(err: HttpErrorResponse) {
     console.log(err.error);
     return throwError(() => err);
