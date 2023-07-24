@@ -7,7 +7,10 @@ import { LoginComponent } from './modules/login/login.component';
 import { MoviesComponent } from './modules/movies/movies.component';
 import { MovieDetailComponent } from './modules/movies/movie-detail/movie-detail.component';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    PasswordModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
