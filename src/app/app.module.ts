@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     PasswordModule,
     ButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

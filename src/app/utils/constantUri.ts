@@ -7,4 +7,5 @@ export class ConstantUri {
     public static readonly apiKey = keyApi;
     public static readonly login = baseUrl + '/authentication/token/validate_with_login'
     public static readonly newToken = baseUrl + '/authentication/token/new'
+    public static readonly popularMovies = baseUrl + '/movie/popular'
 }

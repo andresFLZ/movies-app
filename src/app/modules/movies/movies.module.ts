@@ -4,6 +4,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MoviesRoutingModule } from './movies-routing.module';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     MoviesRoutingModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    CommonModule
   ]
 })
 export class MoviesModule { }
