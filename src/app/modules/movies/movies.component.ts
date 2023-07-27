@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MoviesModel } from 'src/app/model/moives.model';
 import { ApiService } from 'src/app/services/api.service';
 import { ConstantUri } from 'src/app/utils/constantUri';
@@ -17,7 +18,12 @@ export class MoviesComponent {
     total_results: 0,
   };
 
-  constructor(private readonly apiService: ApiService<any>) {}
+  movieImg = ConstantUri.movieImg;
+
+  constructor(
+    private readonly apiService: ApiService<any>,
+    private readonly router: Router
+  ) {}
 
   ngOnInit(): void {
     const getconfig = { url: ConstantUri.popularMovies, params: {api_key: ConstantUri.apiKey} };
@@ -26,5 +32,9 @@ export class MoviesComponent {
       this.movies = val;
       console.log(this.movies);
     });
+  }
+
+  seeDetail(id: number) {
+    this.router.navigate([`popular/detail/${id}`])
   }
 }
