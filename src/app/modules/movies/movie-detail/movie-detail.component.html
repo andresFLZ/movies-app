@@ -1,1 +1,18 @@
-<p>movie-detail works!</p>
+<section class="movie-id">
+    <div class="row">
+        <div *ngIf="movie" class="col-12 my-4 movie">
+            <p-card [header]="movie.title" [subheader]="movie.tagline">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="movieImg + movie.backdrop_path" />
+                </ng-template>
+                <p>
+                    {{movie.overview}}
+                </p>
+                <label>{{movie.release_date}}</label>
+                <ng-template pTemplate="footer">
+                    <p-button label="Return" (click)="returnPopular()"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</section>
